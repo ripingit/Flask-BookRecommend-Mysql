@@ -58,7 +58,7 @@ class BookSqlTools:
             print("dont do created table sql")
         try:
             for i in data.index:
-                x = list(pd.Series(data.ix[i,].astype(str)))
+                x = list(pd.Series(data.ioc[i,].astype(str)))
                 sql = sql_insert.format(tuple(x)).encode(encoding='utf-8')
                 print(sql)
                 try:
