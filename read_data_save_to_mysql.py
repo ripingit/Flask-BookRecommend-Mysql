@@ -59,7 +59,7 @@ class BookSqlTools:
         try:
 	    datas = data.to_dict(orient='records')
             for data in datas:
-                x = list(data.keys())
+                x = list(data.values())
                 sql = sql_insert.format(tuple(x)).encode(encoding='utf-8')
                 print(sql)
                 try:
