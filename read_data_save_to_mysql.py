@@ -57,8 +57,9 @@ class BookSqlTools:
         except:
             print("dont do created table sql")
         try:
-            for i in data.index:
-                x = list(pd.Series(data.ioc[i,].astype(str)))
+	    datas = data.to_dict(orient='records')
+            for data in datas:
+                x = list(data.keys())
                 sql = sql_insert.format(tuple(x)).encode(encoding='utf-8')
                 print(sql)
                 try:
