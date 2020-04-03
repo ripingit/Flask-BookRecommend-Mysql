@@ -57,7 +57,7 @@ class BookSqlTools:
         except:
             print("dont do created table sql")
         try:
-	    datas = data.to_dict(orient='records')
+            datas = data.to_dict(orient='records')
             for data in datas:
                 x = list(data.values())
                 sql = sql_insert.format(tuple(x)).encode(encoding='utf-8')
@@ -92,7 +92,7 @@ cur.close()
 connection = pymysql.connect(user="root",
                          password="123456",
                          port=3300,
-			 db="Book",
+             db="Book",
                          host="127.0.0.1",   
                          charset="utf8")
 
